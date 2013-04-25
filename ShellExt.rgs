@@ -1,0 +1,39 @@
+HKCR
+{
+	NoRemove Directory
+	{
+		NoRemove Background
+		{
+			NoRemove shellex
+			{
+				NoRemove ContextMenuHandlers
+				{
+					ForceRemove zShellExt = s '{E02FC2FB-60A9-4C44-A9CF-1B6A60E8D21A}'
+				}
+			}
+		}
+	}
+	zShellExt.ShellExt.1 = s 'ShellExt Class'
+	{
+		CLSID = s '{E02FC2FB-60A9-4C44-A9CF-1B6A60E8D21A}'
+	}
+	zShellExt.ShellExt = s 'ShellExt Class'
+	{
+		CLSID = s '{E02FC2FB-60A9-4C44-A9CF-1B6A60E8D21A}'
+		CurVer = s 'zShellExt.ShellExt.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E02FC2FB-60A9-4C44-A9CF-1B6A60E8D21A} = s 'ShellExt Class'
+		{
+			ProgID = s 'zShellExt.ShellExt.1'
+			VersionIndependentProgID = s 'zShellExt.ShellExt'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{152C74F4-5015-43CA-B180-29F741A6466F}'
+		}
+	}
+}

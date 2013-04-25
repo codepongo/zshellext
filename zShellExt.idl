@@ -1,0 +1,36 @@
+// zShellExt.idl : zShellExt 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(zShellExt.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(C6C5A941-067F-495E-A603-64C7394CDA69),
+	dual,
+	nonextensible,
+	helpstring("IShellExt 接口"),
+	pointer_default(unique)
+]
+interface IShellExt : IDispatch{
+};
+[
+	uuid(152C74F4-5015-43CA-B180-29F741A6466F),
+	version(1.0),
+	helpstring("zShellExt 1.0 类型库")
+]
+library zShellExtLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(E02FC2FB-60A9-4C44-A9CF-1B6A60E8D21A),
+		helpstring("ShellExt Class")
+	]
+	coclass ShellExt
+	{
+		[default] interface IShellExt;
+	};
+};

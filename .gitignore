@@ -11,3 +11,12 @@
 *.lai
 *.la
 *.a
+
+#sln
+*.suo
+*.user
+Debug/
+Release/
+
+#vim
+*.swp
