@@ -11,5 +11,5 @@ lanuch "Visual Studio vcvarsall" through the explorer content menu
 ![alt="snapshot"](zShellExt.jpg)
 
 
-### source ###
+### source 源码###
 [source code](https://github.com/codepongo/zshellext)
