@@ -64,7 +64,7 @@ HRESULT CShellExt::QueryContextMenu(HMENU hmenu,UINT uMenuIndex, UINT uidFirstCm
 
 
 
-HRESULT CShellExt::GetCommandString(UINT uCmdID, UINT uFlags, UINT* pwReserved, LPSTR szName, UINT cchMax) 
+HRESULT CShellExt::GetCommandString(UINT_PTR uCmdID, UINT uFlags, UINT* pwReserved, LPSTR szName, UINT cchMax) 
 {
 	USES_CONVERSION;
 	LPCTSTR szPrompt;

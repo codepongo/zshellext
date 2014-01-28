@@ -17,6 +17,9 @@
 *.user
 Debug/
 Release/
+*.sdf
+*.opensdf
+ipch/
 
 #vim
 *.swp
