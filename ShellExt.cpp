@@ -30,7 +30,7 @@ HRESULT CShellExt::Initialize(LPCITEMIDLIST pidlFolder, LPDATAOBJECT pDataObj, H
 		NULL, 0);
 	err = _makepath_s(inifile, _MAX_PATH, drive, dir, "zShellExt", "ini");
 
-	GetPrivateProfileStringA("VS2008", "path", "", _vc_path, MAX_PATH*2, inifile);
+	GetPrivateProfileStringA("VS", "path", "", _vc_path, MAX_PATH*2, inifile);
 	//MessageBoxA(NULL, _vc_path, "", MB_OK);
 	return S_OK;
 }
@@ -50,7 +50,7 @@ HRESULT CShellExt::QueryContextMenu(HMENU hmenu,UINT uMenuIndex, UINT uidFirstCm
 	uMenuIndex++;
 
 	InsertMenu ( hmenu, uMenuIndex, MF_STRING | MF_BYPOSITION, uCmdID++,
-		_T("&Visual Studio 2008 Command Prompt") );
+		_T("&Visual Studio Command Prompt") );
 
 
 	uMenuIndex++;
